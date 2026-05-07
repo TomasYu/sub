@@ -1,3 +1,14 @@
+# =======================================================
+# 完整 Clash 配置文件 (2026 修正版)
+# =======================================================
+
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+
+# 1. 代理节点列表 (已按速度排序)
 proxies:
   - name: "🔴🇯🇵[🎬🤖📺🔍]_github.com/Ruk1ng001_8c45a443|3.4MB/s"
     type: hysteria2
@@ -15,11 +26,9 @@ proxies:
     tls: true
     network: ws
     servername: gogo7.kmj.qzz.io
-    client-fingerprint: chrome
     ws-opts:
       headers:
         Host: gogo7.kmj.qzz.io
-        User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4
       path: /
   - name: "🇳🇱NL_6|2.1MB/s"
     type: vless
@@ -36,7 +45,6 @@ proxies:
     xhttp-opts:
       mode: auto
       path: /
-    client-fingerprint: chrome
   - name: "🇳🇱NL_5|2.0MB/s"
     type: ss
     server: 82.38.31.103
@@ -49,11 +57,8 @@ proxies:
     port: 443
     password: 8r<[9'l6hAO#8ZQi
     sni: Koma-YT.PAGeS.Dev
-    skip-cert-verify: true
     network: ws
     ws-opts:
-      headers:
-        Host: Koma-YT.PAGeS.Dev
       path: "/trTelegram🇨🇳 @WangCai2"
   - name: "🇳🇱NL_2|1.5MB/s"
     type: ss
@@ -71,8 +76,6 @@ proxies:
     network: ws
     servername: qyi.fqjd663.ggff.net
     ws-opts:
-      headers:
-        Host: qyi.fqjd663.ggff.net
       path: /
   - name: "🇩🇪DE_1|1.4MB/s"
     type: vless
@@ -83,15 +86,12 @@ proxies:
     network: ws
     servername: xn-de.shakhle.ir.
     ws-opts:
-      headers:
-        Host: xn-de.shakhle.ir.
       path: /
   - name: "🇺🇸US_1|1.3MB/s"
     type: hysteria2
     server: 46.38.157.183
     port: 10003
     password: f8551394-bf88-4ade-a835-3628dc7de30a
-    tfo: true
     skip-cert-verify: true
   - name: "🇭🇰HK_3|1.3MB/s"
     type: trojan
@@ -101,158 +101,44 @@ proxies:
     sni: Koma-YT.PAGeS.Dev
     network: ws
     ws-opts:
-      headers:
-        Host: Koma-YT.PAGeS.Dev
       path: "/trTelegram🇨🇳 @WangCai2"
   - name: "🇺🇸US_2|1.2MB/s"
     type: hysteria2
     server: 46.38.157.183
     port: 10005
     password: b26aff39-5782-4380-95af-b033fc4c0820
-    tfo: true
     skip-cert-verify: true
-  - name: "🇭🇰HK_5|974KB/s"
-    type: trojan
-    server: 38.207.173.72
-    port: 26546
-    password: 8r<[9'l6hAO#8ZQi
-    sni: Koma-YT.PAGeS.Dev
-    network: ws
-    ws-opts:
-      path: "/trTelegram🇨🇳 @WangCai2"
-  - name: "🇭🇰HK_4|837KB/s"
-    type: trojan
-    server: 102.134.55.53
-    port: 20082
-    password: 8r<[9'l6hAO#8ZQi
-    sni: Koma-YT.PAGeS.Dev
-    network: ws
-    ws-opts:
-      path: "/trTelegram🇨🇳 @WangCai2"
-  - name: "🇷🇺RU_1|729KB/s"
-    type: vless
-    server: 178.72.181.34
-    port: 52006
-    uuid: 75807638-6f19-1f40-ae08-38492ee85c88
-    tls: true
-    flow: xtls-rprx-vision
-    servername: cluster-europe-1.firstvideocdn.ru
-  - name: "🇩🇪DE_2|715KB/s"
-    type: vless
-    server: 138.124.32.78
-    port: 443
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    tls: true
-    network: ws
-    servername: sni.latonyamadeline.ndjp.net
-    ws-opts:
-      headers:
-        Host: sni.latonyamadeline.ndjp.net
-      path: ""
-  - name: "🇸🇪SE_2|707KB/s"
-    type: trojan
-    server: 185.102.136.201
-    port: 443
-    password: 8r<[9'l6hAO#8ZQi
-    sni: Koma-YT.PAGeS.Dev
-    network: ws
-    ws-opts:
-      path: "/trTelegram🇨🇳 @WangCai2"
-  - name: "🇭🇰HK_1|687KB/s"
-    type: vless
-    server: hk1.ap221.com
-    port: 443
-    uuid: 74988350-8b14-4924-b8a2-c3aac967bf28
-    tls: true
-    flow: xtls-rprx-vision
-    servername: hk.ap221.com
-  - name: "🇯🇵JP_1|653KB/s"
-    type: trojan
-    server: 45.159.48.37
-    port: 41607
-    password: 8r<[9'l6hAO#8ZQi
-    sni: Koma-YT.PAGeS.Dev
-    network: ws
-    ws-opts:
-      path: "/trTelegram🇨🇳 @WangCai2"
-  - name: "🇺🇸US_6|647KB/s"
-    type: vless
-    server: 141.193.213.11
-    port: 2053
-    uuid: 8c4604ef-749c-4b56-adf1-7da405002a21
-    tls: true
-    network: ws
-    servername: qyi.fqjd663.ggff.net
-    ws-opts:
-      path: /
-  - name: "🇳🇱NL_4|592KB/s"
-    type: vless
-    server: 138.124.16.38
-    port: 8443
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    tls: true
-    network: ws
-    servername: sni.111000.v6.army
-    ws-opts:
-      path: "/?https://t.me/WangCai2🇨🇳="
-  - name: "🇿🇦ZA_1|582KB/s"
-    type: mieru
-    server: 45.221.98.11
-    port: 28866
-    password: dongtaiwang.com
-    username: dongtaiwang.com
-    transport: TCP
-    multiplexing: MULTIPLEXING_LOW
-  - name: "🇳🇱NL_1|571KB/s"
-    type: ss
-    server: 82.38.31.134
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-    udp: true
-  - name: "🇺🇸US_5|561KB/s"
-    type: vless
-    server: www.panel.com
-    port: 2053
-    uuid: 8c4604ef-749c-4b56-adf1-7da405002a21
-    tls: true
-    network: ws
-    servername: qyi.fqjd663.ggff.net
-    ws-opts:
-      path: /
-  - name: "🇺🇸US_3|554KB/s"
-    type: trojan
-    server: 143.47.96.200
-    port: 443
-    password: 8r<[9'l6hAO#8ZQi
-    sni: Koma-YT.PAGeS.Dev
-    network: ws
-    ws-opts:
-      path: "/trTelegram🇨🇳 @WangCai2"
-  - name: "🇳🇱NL_3|534KB/s"
-    type: trojan
-    server: 95.164.62.196
-    port: 443
-    password: 8r<[9'l6hAO#8ZQi
-    sni: Koma-YT.PAGeS.Dev
-    network: ws
-    ws-opts:
-      path: "/trTelegram🇨🇳 @WangCai2"
-  - name: "🇸🇬SG_1|526KB/s"
-    type: trojan
-    server: 43.153.206.239
-    port: 27015
-    password: 8r<[9'l6hAO#8ZQi
-    sni: Koma-YT.PAGeS.Dev
-    network: ws
-    ws-opts:
-      path: "/trTelegram🇨🇳 @WangCai2"
-  - name: "🇸🇪SE_1|514KB/s"
-    type: trojan
-    server: 216.144.231.47
-    port: 443
-    password: 8r<[9'l6hAO#8ZQi
-    sni: Koma-YT.PAGeS.Dev
-    network: ws
-    ws-opts:
-      path: "/trTelegram🇨🇳 @WangCai2"
+
+# 2. 策略组配置 (这里引用上面的节点名字)
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ⚡ 自动选择
+      - 🔴🇯🇵[🎬🤖📺🔍]_github.com/Ruk1ng001_8c45a443|3.4MB/s
+      - 🇯🇵JP_2|3.4MB/s
+      - 🇳🇱NL_6|2.1MB/s
+      - 🇳🇱NL_5|2.0MB/s
+      - 🇭🇰HK_2|1.9MB/s
+      - 🇳🇱NL_2|1.5MB/s
+      - 🇺🇸US_4|1.5MB/s
+      - 🇩🇪DE_1|1.4MB/s
+      - 🇺🇸US_1|1.3MB/s
+      - 🇭🇰HK_3|1.3MB/s
+      - 🇺🇸US_2|1.2MB/s
+
+  - name: ⚡ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🔴🇯🇵[🎬🤖📺🔍]_github.com/Ruk1ng001_8c45a443|3.4MB/s
+      - 🇯🇵JP_2|3.4MB/s
+      - 🇳🇱NL_6|2.1MB/s
+      - 🇳🇱NL_5|2.0MB/s
+      - 🇭🇰HK_2|1.9MB/s
+
+# 3. 基础规则
+rules:
+  - GEOIP,CN,DIRECT
+  - MATCH,🚀 节点选择
